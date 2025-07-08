@@ -1,0 +1,14 @@
+# Core dependencies
+requests==2.31.0
+beautifulsoup4==4.12.3
+pandas==2.2.2
+matplotlib==3.8.3
+
+# Reddit API
+praw==7.7.1
+
+# Environment management
+python-dotenv==1.0.1
+
+# Date handling
+python-dateutil==2.9.0.post0
