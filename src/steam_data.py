@@ -9,7 +9,7 @@ import random
 def get_steam_followers_history(appid):
     url = f"https://steamdb.info/app/{appid}/graphs/"
     
-    # Realistic browser headers
+    # browser headers
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -22,6 +22,8 @@ def get_steam_followers_history(appid):
         'Sec-Fetch-Site': 'same-origin',
         'Sec-Fetch-User': '?1',
         'Cache-Control': 'max-age=0',
+        'Referer': 'https://steamdb.info/',
+        'DNT': '1',
     }
     
     try:

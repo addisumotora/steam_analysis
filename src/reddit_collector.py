@@ -1,4 +1,3 @@
-# reddit_collector.py
 import time
 import requests
 import pandas as pd
@@ -14,10 +13,9 @@ def get_reddit_mentions():
     after = int(start_date.timestamp())
     before = int(end_date.timestamp())
     
-    # Corrected endpoint and query structure
     base_url = "https://api.pushshift.io/reddit/submission/search/ "
     params = {
-        "q": f"title:{GAME_NAME}",  # Focus on title matches
+        "q": f"title:{GAME_NAME}", 
         "sort": "desc",
         "sort_type": "created_utc",
         "after": after,

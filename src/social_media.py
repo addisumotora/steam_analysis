@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 import logging
 
-# Configure logging
+# logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
@@ -30,11 +30,11 @@ def get_reddit_mentions(game_name):
         reddit = praw.Reddit(
             client_id=client_id,
             client_secret=client_secret,
-            user_agent="steam_analytics/1.0",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 steam-tracker/1.0 by yourusername",
             check_for_async=False
         )
         # For read-only access, do not check user.me()
-        logger.info("Reddit API client initialized in read-only mode.")
+        logger.info("Reddit API client initialized in read-only mode with realistic User-Agent.")
         
         end_date = datetime.utcnow()
         start_date = end_date - timedelta(days=30)

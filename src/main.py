@@ -2,16 +2,17 @@ import os
 import sys
 import logging
 import traceback
+
+# Add parent directory to Python path for config import
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
 import config
 from steam_data import get_steam_followers_history
 from social_media import get_reddit_mentions
 from data_processor import merge_data
 from visualizer import plot_results
 import pandas as pd
-
-# Add parent directory to Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Configure logging
 logging.basicConfig(
